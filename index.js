@@ -9,7 +9,8 @@
 // It now gives you the Cartesian Product
 // [1, 2].apply([a => a + 1, a => a + 2])
 // returns [2, 3, 3, 4]
-//
+// TODO: Add readme with instructions on how to use this
+// TODO: Add instruction on how to derive this implementation
 
 const flat = (arr) => arr.reduce((acc, val) => acc.concat(val), [])
 const flatMap = (fn, arr) => flat(arr.map(fn))
