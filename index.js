@@ -9,19 +9,25 @@
 // It now gives you the Cartesian Product
 // [1, 2].apply([a => a + 1, a => a + 2])
 // returns [2, 3, 3, 4]
+//
+
+const flat = (arr) => arr.reduce((acc, val) => acc.concat(val), [])
+const flatMap = (fn, arr) => flat(arr.map(fn))
+const apply = (fnArr, arr) => flat(arr.map(value => fnArr.map(f => f (value))))
 
 Array.prototype.flat = function() {
     let arrayValues = this;
-    return arrayValues.reduce((acc, val) => acc.concat(val), []);
+    return flat(arrayValues) 
 }
 
 Array.prototype.flatMap = function(fn) {
     let arrayValues = this;
-    return arrayValues.map(fn).flat();
+    return flatMap(fn, arrayValues) 
 }
 
 Array.prototype.apply = function(applyArray) {
     let arrayValues = this;
-    return arrayValues.map(value => applyArray.map(f => f(value))).flat()
+    return apply(applyArray, arrayValues) 
 }
 
+module.exports = {flat, flatMap, apply}
