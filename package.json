@@ -1,20 +1,20 @@
 {
-  "name": "arrayapply",
-  "version": "0.0.2",
-  "description": "implementation of apply for Arrays",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest test.js"
-  },
-  "keywords": [
-    "functional",
-    "fp",
-    "array",
-    "arrays"
-  ],
-  "author": "Michel Vorwieger",
-  "license": "MIT",
-  "devDependencies": {
-    "jest": "^23.6.0"
-  }
+    "name": "arrayapply",
+    "version": "0.0.3",
+    "description": "implementation of apply for Arrays",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest test.js"
+    },
+    "keywords": [
+        "functional",
+        "fp",
+        "array",
+        "arrays"
+    ],
+    "author": "Michel Vorwieger",
+    "license": "MIT",
+    "devDependencies": {
+        "jest": "^23.6.0"
+    }
 }

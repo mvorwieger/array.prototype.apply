@@ -14,8 +14,10 @@
 
 const flat = (arr) => arr.reduce((acc, val) => acc.concat(val), [])
 const flatMap = (fn, arr) => flat(arr.map(fn))
-const apply = (fnArr, arr) => flat(arr.map(value => fnArr.map(f => f (value))))
+const apply = (fnArr, arr) => flat(arr.map(value => fnArr.map(f => f(value))))
 
+/**
+This is how you could use it in your code: 
 Array.prototype.flat = function() {
     let arrayValues = this;
     return flat(arrayValues) 
@@ -30,5 +32,6 @@ Array.prototype.apply = function(applyArray) {
     let arrayValues = this;
     return apply(applyArray, arrayValues) 
 }
+*/
 
-module.exports = {flat, flatMap, apply}
+module.exports = { flat, flatMap, apply }
